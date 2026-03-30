@@ -33,15 +33,14 @@ System forces FAL API generation even when local GPU is available.
 LTX 强制要求 GPU 有 31GB VRAM 才会使用本地显卡，低于此值会强制走 API 模式。
 LTX requires 31GB VRAM to use local GPU. Below this, it forces API mode.
 
-================================================================================
+
 【修复方法 / Fix Method】
-================================================================================
+
 
 运行: API issues.bat.bat (以管理员身份)
 Run: API issues.bat.bat (as Administrator)
 
-================================================================================
-================================================================================
+
 
 【或者手动 / Or Manual】
 
