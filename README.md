@@ -18,7 +18,7 @@ It can be accessed via ComfyUI, node address: https://github.com/supart/ComfyUI_
 1. 复制LTX桌面版的快捷方式到LTX_Shortcut
 
 2. 运行run.bat
-----
+
 1. Copy the LTX desktop shortcut to LTX_Shortcut
 
 2. Run run.bat
@@ -40,7 +40,7 @@ LTX requires 31GB VRAM to use local GPU. Below this, it forces API mode.
 运行: API issues.bat.bat (以管理员身份)
 Run: API issues.bat.bat (as Administrator)
 
-
+----
 
 【或者手动 / Or Manual】
 
