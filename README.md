@@ -2,11 +2,11 @@
 
 April 2, 2026 Update:
 
-1. Added LoRA functionality (place LoRA in the `loras` folder within your file directory).
+1. Added LoRA functionality (place LoRA in the `loras` folder within the model directory).
 
-2. Added model selection capability (currently testing quantization to reduce GPU memory usage; modifying the model does not currently lower the GPU memory requirement and will be added in a future update).
+2. Added model selection capability (currently testing quantization to reduce GPU memory usage; modifying the model does not currently lower the GPU memory requirement, pending future updates).
 
-3. Added multi-frame insertion functionality with two generation modes: Mode 1: Inserts multiple frames into a latent space to directly generate a long video. Mode 2: Generates many independent first and last frame segments, which are then stitched together to form a complete video.
+3. Added multi-frame insertion functionality, with two generation modes: Mode 1: Inserts multiple frames into a latent space to directly generate a long video. Mode 2: Generates many independent first and last frame segments, which are then stitched together to form a complete video.
 
 -------
 
