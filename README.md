@@ -2,7 +2,7 @@
 
 April 2, 2026 Update:
 
-1. Added LoRA functionality (place LoRA in the `loras` folder within the model directory).
+1. Added LoRA functionality (place LoRA in the `loras` folder within the model directory).（Quick test LoRa: https://civitai.com/models/2482513/ltx23）
 
 2. Added model selection capability (currently testing quantization to reduce GPU memory usage; modifying the model does not currently lower the GPU memory requirement, pending future updates).
 
