@@ -1,4 +1,16 @@
 # LTX2.3-Multifunctional
+
+April 2, 2026 Update:
+
+1. Added LoRA functionality (place LoRA in the `loras` folder within your file directory).
+
+2. Added model selection capability (currently testing quantization to reduce GPU memory usage; modifying the model does not currently lower the GPU memory requirement and will be added in a future update).
+
+3. Added multi-frame insertion functionality with two generation modes: Mode 1: Inserts multiple frames into a latent space to directly generate a long video. Mode 2: Generates many independent first and last frame segments, which are then stitched together to form a complete video.
+
+-------
+
+
 Functionality optimization based on LTX desktop version
 
 This program mainly optimizes the desktop version of LTX, breaking the generation time limitations and lowering the barrier to use. It now only requires 24GB to run, whereas the desktop version needs 32GB.
