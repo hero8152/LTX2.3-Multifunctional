@@ -1,8 +1,9 @@
 # LTX2.3-Multifunctional
 
 
-Updated 2026/4/3: The official version 1.0.3 has been released, significantly reducing VRAM usage. Graphics cards with 12GB or more of VRAM can now run the game. Our tests showed a 720p frame rate for the first and last 10 seconds, with a maximum VRAM usage of only 13GB!
+Updated April 3, 2026:
 
+Official version 1.0.3 has been released, significantly reducing video memory usage. Now, graphics cards with 12GB or more of video memory can run the program. Our tests show that, in a 10-second 720p frame test, the maximum video memory usage is only 13GB!
 Download Link: https://github.com/Lightricks/LTX-Desktop/releases/tag/v1.0.3
 
 ----
