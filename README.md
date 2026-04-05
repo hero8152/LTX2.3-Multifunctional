@@ -50,21 +50,6 @@ It can be accessed via ComfyUI, node address: https://github.com/supart/ComfyUI_
 系统强制使用 FAL API 生成图片，即使本地有 GPU 可用。
 System forces FAL API generation even when local GPU is available.
 
-【原因 / Cause】
-LTX 强制要求 GPU 有 31GB VRAM 才会使用本地显卡，低于此值会强制走 API 模式。
-LTX requires 31GB VRAM to use local GPU. Below this, it forces API mode.
-
-
-【修复方法 / Fix Method】
-
-
-运行: API issues.bat.bat (以管理员身份)
-Run: API issues.bat.bat (as Administrator)
-
-----
-
-【或者手动 / Or Manual】
-
 1. 修改 VRAM 阈值 / Modify VRAM Threshold
    文件路径 / File: C:\Program Files\LTX Desktop\resources\backend\runtime_config\runtime_policy.py
    第16行 / Line 16:
