@@ -3,7 +3,7 @@
 
 Updated April 3, 2026:
 
-Official version 1.0.3 has been released, significantly reducing video memory usage. Now, graphics cards with 12GB or more of video memory can run the program. Our tests show that, in a 10-second 720p frame test, the maximum video memory usage is only 13GB!
+Official version 1.0.3 has been released, significantly reducing video memory usage. Now, graphics cards with 12GB or more of video memory can run the program. Our tests show that, in a 10-second 720p frame test, the maximum video memory usage is only 12GB!
 Download Link: https://github.com/Lightricks/LTX-Desktop/releases/tag/v1.0.3
 
 ----
