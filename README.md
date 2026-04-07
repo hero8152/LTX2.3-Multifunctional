@@ -6,6 +6,8 @@ Limited availability—free 72-hour online trial: https://c2c730053ea44cc890a14f
 
 Tutorial： https://youtu.be/uQIgVwDjzBg
 
+Update Notes: The latest versions 1.0.3 and 1.0.4 are compatible. Starting from version 1.0.3, regardless of the graphics card configuration, the default calculation is based on CPU memory, which slows down graphics cards with high video memory. Therefore, a video memory setting has been added. Setting it to 0 will use all video memory (recommended 24GB or more video memory, 32GB or more RAM). Setting it to less than 24GB will use some RAM (recommended 10GB or more video memory, 64GB or more RAM).
+
 ---
 
 Updated April 3, 2026:
