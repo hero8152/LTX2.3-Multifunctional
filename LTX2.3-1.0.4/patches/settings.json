@@ -1,0 +1,23 @@
+{
+  "use_torch_compile": false,
+  "load_on_startup": false,
+  "ltx_api_key": "1231",
+  "user_prefers_ltx_api_video_generations": false,
+  "fal_api_key": "",
+  "use_local_text_encoder": true,
+  "fast_model": {
+    "use_upscaler": true
+  },
+  "pro_model": {
+    "steps": 20,
+    "use_upscaler": true
+  },
+  "prompt_cache_size": 100,
+  "prompt_enhancer_enabled_t2v": true,
+  "prompt_enhancer_enabled_i2v": false,
+  "gemini_api_key": "",
+  "seed_locked": false,
+  "locked_seed": 42,
+  "models_dir": "",
+  "lora_dir": ""
+}
