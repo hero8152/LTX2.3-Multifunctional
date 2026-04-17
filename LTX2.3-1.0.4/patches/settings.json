@@ -1,7 +1,7 @@
 {
   "use_torch_compile": false,
   "load_on_startup": false,
-  "ltx_api_key": "1231",
+  "ltx_api_key": "",
   "user_prefers_ltx_api_video_generations": false,
   "fal_api_key": "",
   "use_local_text_encoder": true,
