@@ -10,6 +10,15 @@ Update Notes: The latest versions 1.0.3 and 1.0.4 are compatible. Starting from 
 
 ---
 
+April 22, 2026 Update:
+
+Fixed stuttering issue during multi-frame generation.
+
+Added multi-LoRA functionality.
+
+Added TTS functionality. Create a new folder named "VoxCPM2" in the model directory, download the model: https://huggingface.co/openbmb/VoxCPM2/tree/main, and run "installTTS environment.txt" to install the TTS environment.
+---
+
 Updated April 3, 2026:
 
 Official version 1.0.3 has been released, significantly reducing video memory usage. Now, graphics cards with 12GB or more of video memory can run the program. Our tests show that, in a 10-second 720p frame test, the maximum video memory usage is only 12GB!
