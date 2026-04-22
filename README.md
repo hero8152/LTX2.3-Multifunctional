@@ -17,6 +17,7 @@ Fixed stuttering issue during multi-frame generation.
 Added multi-LoRA functionality.
 
 Added TTS functionality. Create a new folder named "VoxCPM2" in the model directory, download the model: https://huggingface.co/openbmb/VoxCPM2/tree/main, and run "installTTS environment.txt" to install the TTS environment.
+
 ---
 
 Updated April 3, 2026:
