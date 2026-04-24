@@ -2,7 +2,7 @@
 
 Cloud image: https://studio.aigate.cc/images/1093173874974662656?channel=R6P1L7N3J
 
-Limited availability—free 72-hour online trial: https://c2c730053ea44cc890a14f772cc8d060.region1.waas.aigate.cc
+Limited availability—free 24-hour online trial: https://cf9a6e7269dd44748353463b2d871d41.region1.waas.aigate.cc/
 
 Tutorial： https://youtu.be/uQIgVwDjzBg
 
