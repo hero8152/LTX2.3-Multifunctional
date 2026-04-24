@@ -1,0 +1,17 @@
+# 0. 进入 LTX Python 目录 (使用环境变量，自动适配任何用户的电脑)
+cd $env:LOCALAPPDATA\LTXDesktop\python
+
+# 1. 下载官方的 pip 安装脚本
+Invoke-WebRequest -Uri https://bootstrap.pypa.io/get-pip.py -OutFile get-pip.py
+
+# 2. 用 LTX 的 Python 运行这个脚本来修复/更新 pip
+.\python.exe get-pip.py
+
+# 3. 临时设置 MSVC 编译器的环境变量为 UTF-8 (以防又遇到刚才的 C++ 乱码)
+$env:CL="/utf-8"
+
+# 4. 指定用 LTX 的 Python 安装 editdistance
+.\python.exe -m pip install editdistance
+
+# 5. 【核心防御】指定用 LTX 的 Python 安装主包，并强制指定 GPU 镜像源防覆盖
+.\python.exe -m pip install voxcpm --extra-index-url https://download.pytorch.org/whl/cu118
