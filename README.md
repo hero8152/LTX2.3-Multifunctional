@@ -1,5 +1,5 @@
 ### RH Online Use of Standard Version LTX2.3:
-[RH Online LTX2.3 Standard Version](https://www.runninghub.cn/post/2030340655863570434?inviteCode=rh-v1331)
+[RH Online LTX2.3 Standard Version](https://www.runninghub.ai/post/2030340655863570434?inviteCode=rh-v1331)
 
 ### Local Plugin Version Online Mirror (Registration gives computation voucher):
 [Local Plugin Version](https://studio.aigate.cc/images/1093173874974662656?channel=R6P1L7N3J)
