@@ -1,92 +1,62 @@
-# LTX2.3-Multifunctional
+### RH Online Use of Standard Version LTX2.3:
+[RH Online LTX2.3 Standard Version](https://www.runninghub.cn/post/2030340655863570434?inviteCode=rh-v1331)
 
-Cloud image: https://studio.aigate.cc/images/1093173874974662656?channel=R6P1L7N3J
+### Local Plugin Version Online Mirror (Registration gives computation voucher):
+[Local Plugin Version](https://studio.aigate.cc/images/1093173874974662656?channel=R6P1L7N3J)
 
-Limited availability—free 24-hour online trial: https://cf9a6e7269dd44748353463b2d871d41.region1.waas.aigate.cc/
+### Video Tutorial:
+[Video Tutorial](https://youtu.be/rQOjHtzONpE)
 
-Tutorial： https://youtu.be/uQIgVwDjzBg
-
-Update Notes: The latest versions 1.0.3 and 1.0.4 are compatible. Starting from version 1.0.3, regardless of the graphics card configuration, the default calculation is based on CPU memory, which slows down graphics cards with high video memory. Therefore, a video memory setting has been added. Setting it to 0 will use all video memory (recommended 24GB or more video memory, 32GB or more RAM). Setting it to less than 24GB will use some RAM (recommended 10GB or more video memory, 64GB or more RAM).
-
----
-
-April 22, 2026 Update:
-
-Fixed stuttering issue during multi-frame generation.
-
-Added multi-LoRA functionality.
-
-Added TTS functionality. Create a new folder named "VoxCPM2" in the model directory, download the model: https://huggingface.co/openbmb/VoxCPM2/tree/main, and run "installTTS environment.txt" to install the TTS environment.
+### GitHub Project Address:
+[GitHub Project](https://github.com/hero8152/LTX2.3-Multifunctional/tree/main)
 
 ---
 
-Updated April 3, 2026:
+### Model Directory:
+Root directory:
+  - dpt-hybrid-midas folder
+  - gemma-3-12b-it-qat-q4_0-unquantized folder
+  - loras folder
+  - VoxCPM2 folder
+  - Z-Image-Turbo folder
+  - dw-ll_ucoco_384_bs5.torchscript.pt
+  - yolox_l.torchscript.pt
+  - LTX2.3-22B_IC-LoRA-Cameraman_v1_10500.safetensors
+  - ltx-2.3-22b-distilled-fp8.safetensors
+  - ltx-2.3-spatial-upscaler-x2-1.0.safetensors
 
-Official version 1.0.3 has been released, significantly reducing video memory usage. Now, graphics cards with 12GB or more of video memory can run the program. Our tests show that, in a 10-second 720p frame test, the maximum video memory usage is only 12GB!
-Download Link: https://github.com/Lightricks/LTX-Desktop/releases/tag/v1.0.3
+### Software Download Link:
+[Download LTX2.3](https://github.com/Lightricks/LTX-Desktop/releases/tag/v1.0.4)
 
-----
+### fp8 Model Link:
+[fp8 Model](https://huggingface.co/Lightricks/LTX-2.3-fp8/blob/main/ltx-2.3-22b-distilled-fp8.safetensors)
 
+### Camera Control Model Link:
+[Camera Control Model](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1/blob/a4445ddc3f72374adbf218df29906e475b68bcb1/LTX2.3-22B_IC-LoRA-Cameraman_v1_10500.safetensors)
 
-April 2, 2026 Update:
+### Migration Control Model Links:
+- [dw-ll_ucoco_384_bs5](https://huggingface.co/hr16/DWPose-TorchScript-BatchSize5/blob/main/dw-ll_ucoco_384_bs5.torchscript.pt)
+- [yolox_l.torchscript](https://huggingface.co/hr16/yolox-onnx/blob/main/yolox_l.torchscript.pt)
+- [dpt-hybrid-midas](https://huggingface.co/Intel/dpt-hybrid-midas/tree/main)
+### TTS Link: 
+- [VoxCPM2](https://huggingface.co/openbmb/VoxCPM2/tree/main)
 
-1. Added LoRA functionality (place LoRA in the `loras` folder within the model directory).（Quick test LoRa: https://civitai.com/models/2482513/ltx23）
+---
 
-2. Added model selection capability (currently testing quantization to reduce GPU memory usage; modifying the model does not currently lower the GPU memory requirement, pending future updates).
+### Software Feature Introduction (These features are not available in the desktop version):
+1. Switch between multiple GPUs, with queue functionality supported.
+2. Set the maximum memory limit based on your own GPU memory to prevent overflow; for memories over 24GB, you can set it to 0, which means no memory limitation.
+3. Switch to fp8 models, which I personally find to have better performance.
+4. Mount multiple loras.
+5. Lock seed functionality, and the generated videos will carry all relevant information for future reuse.
+   - Key point: If a good result is achieved with a specific seed, you can lock it and fine-tune the prompt or lora strength to improve the results further.
+6. As long as there’s enough GPU memory, you can generate longer videos instead of being restricted by the desktop version's 1080p 5-second limit.
+7. First and last frame functionality.
+8. Intelligent multi-frame functionality.
+9. Action migration (including pose/depth/line control), camera movement migration, and video redrawing.
+10. TTS voice generation and voice cloning functionality.
+11. It can be accessed via ComfyUI, node address: https://github.com/supart/ComfyUI_TY_LTX_Desktop_Bridge
 
-3. Added multi-frame insertion functionality, with two generation modes: Mode 1: Inserts multiple frames into a latent space to directly generate a long video. Mode 2: Generates many independent first and last frame segments, which are then stitched together to form a complete video.
-
--------
-
-
-Functionality optimization based on LTX desktop version
-
-This program mainly optimizes the desktop version of LTX, breaking the generation time limitations and lowering the barrier to use. It now only requires 24GB to run, whereas the desktop version needs 32GB.
-
-Compared to the messy and complex workflows and error-prone nodes in the ComfyUI version, this one integrates all features, including image-to-video, text-to-video, start/end frames, lip-sync, video enhancement, and image generation.
-
-No need to install any third-party software—just install the LTX desktop version and you’re good to go. It’s very simple and efficient.
-
-Tutorial: https://youtu.be/rM_wUogtrOU
-
-Desktop version software download address: https://ltx.io/ltx-desktop
-
-It can be accessed via ComfyUI, node address: https://github.com/supart/ComfyUI_TY_LTX_Desktop_Bridge
-
------------
-
-1. 复制LTX桌面版的快捷方式到LTX_Shortcut
-
-2. 运行run.bat
-
-1. Copy the LTX desktop shortcut to LTX_Shortcut
-
-2. Run run.bat
-----
-
-
-【问题描述 / Problem】
-系统强制使用 FAL API 生成图片，即使本地有 GPU 可用。
-System forces FAL API generation even when local GPU is available.
-
-1. 修改 VRAM 阈值 / Modify VRAM Threshold
-   文件路径 / File: C:\Program Files\LTX Desktop\resources\backend\runtime_config\runtime_policy.py
-   第16行 / Line 16:
-   原 / Original: return vram_gb < 31
-   改为 / Change:  return vram_gb < 6
-
-2. 清空 API Key / Clear API Key
-   文件路径 / File: C:\Users\<用户名>\AppData\Local\LTXDesktop\settings.json
-   原 / Original: "fal_api_key": "xxxxx"
-   改为 / Change:  "fal_api_key": ""
-
-【说明 / Note】
-- VRAM 阈值改为 6GB，意味着 6GB 及以上显存都会使用本地显卡
-- VRAM threshold set to 6GB means 6GB+ VRAM will use local GPU
-- 清空 fal_api_key 避免系统误判为已配置 API
-- Clear fal_api_key to avoid system thinking API is configured
-- 修改后重启程序即可生效
-- Restart LTX Desktop after changes
 <img width="2129" height="1614" alt="微信图片_20260402170131_481_218" src="https://github.com/user-attachments/assets/dd0f1044-f66f-4785-89ab-e1717a041c8b" />
 <img width="2121" height="1610" alt="微信图片_20260402171010_482_218" src="https://github.com/user-attachments/assets/a40877bc-3682-44e3-9602-05d3bbb5cb89" />
 https://github.com/user-attachments/assets/b7399618-0963-4834-81b2-d737d05a41a0
