@@ -1,0 +1,62 @@
+=== Installation Method ===
+
+1. Install the LTX.exe installer.
+
+2. When you open the software, it will automatically download the environment package. If your network is slow, it is recommended to download the environment package from the cloud drive and extract it to:
+C:\Users\<Username>\AppData\Local
+
+3. When you open the software, a window will pop up asking you to set the model directory. Just set it (if you encounter any issues, refer to Issue 1).
+
+4. After running the software, you should be able to generate images and videos normally (if you encounter any issues, refer to Issue 2).
+
+5. Open the plugin and replace the shortcuts in LTX_Shortcut with your own. Then run run.bat to start.
+
+6. Model directory structure: The default 'loras' directory is placed in the root of the model directory.
+
+
+=== Issue 1: How to Reset API and Model Directory ===
+
+Open the directory (make sure to enable hidden files and folders):
+C:\Users\<Username>\AppData\Local\LTXDesktop\settings.json
+
+   Original: "fal_api_key": "xxxxx"
+   Change to: "fal_api_key": ""
+
+Reopen the software to apply the changes.
+
+
+=== Issue 2: API Mode or Unable to Generate Video ===
+
+1. If the video memory is less than 24GB and you are forced to use the API, here's the solution:
+Copy the runtime_policy.py and paste it into the following directory to replace the old file:
+C:\Program Files\LTX Desktop\resources\backend\runtime_config\
+
+2. To reset the model directory:
+Open the directory (make sure to enable hidden files and folders):
+C:\Users\<Username>\AppData\Local\LTXDesktop\settings.json
+
+   Original: "fal_api_key": "xxxxx"
+   Change to: "fal_api_key": ""
+
+
+=== Issue 3: TTS Cannot Be Used ===
+
+If you are using the environment package from the cloud drive, there should be no errors. If you upgraded from an old version, copy and run the following commands via command line:
+
+# 0. Navigate to the LTX Python directory (this uses environment variables to adapt to any user's computer)
+cd $env:LOCALAPPDATA\LTXDesktop\python
+
+# 1. Download the official pip installation script
+Invoke-WebRequest -Uri https://bootstrap.pypa.io/get-pip.py -OutFile get-pip.py
+
+# 2. Use LTX's Python to run this script to fix/update pip
+.\python.exe get-pip.py
+
+# 3. Temporarily set the MSVC compiler environment variable to UTF-8 (to prevent the C++ encoding issue we encountered earlier)
+$env:CL="/utf-8"
+
+# 4. Use LTX's Python to install editdistance
+.\python.exe -m pip install editdistance
+
+# 5. [Core Defense] Use LTX's Python to install the main package, forcing the use of the GPU mirror source to avoid overwriting
+.\python.exe -m pip install voxcpm --extra-index-url https://download.pytorch.org/whl/cu118

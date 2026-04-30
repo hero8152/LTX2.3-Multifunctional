@@ -1,0 +1,65 @@
+===安装方法====
+
+1. 安装LTX.exe的安装程序
+
+2. 打开软件会自动下载环境包，如果网络很差的，推荐下载网盘环境包解压到：
+C:\Users\<用户名>AppData\Local
+
+3. 打开软件会弹出设置模型目录，设置就可以了（遇到问题看问题1）
+
+4. 运行软件可以正常生图和生视频（遇到问题看问题2）
+
+5. 打开插件，将LTX_Shortcut中的快捷方式替换成自己的，运行run.bat就可以了
+
+6. 模型目录结构：默认的loras目录放在模型根目录中
+
+
+===问题1：如何重置API和模型目录===
+
+打开目录（注意用户名是自己的，需要设置显示隐藏文件夹）：
+
+C:\Users\<用户名>\AppData\Local\LTXDesktop\settings.json
+
+   原: "fal_api_key": "xxxxx"
+   改为:  "fal_api_key": ""
+
+重新打开软件就可以了。
+
+
+===问题2：API模式或无法生成视频===
+
+
+1. 显存低于24G，强制使用API的解决办法：
+复制runtime_policy.py，粘贴到以下目录替换：
+C:\Program Files\LTX Desktop\resources\backend\runtime_config\
+
+
+2. 想要重新设置模型目录：
+打开目录（注意用户名是自己的，需要设置显示隐藏文件夹）：
+C:\Users\<用户名>\AppData\Local\LTXDesktop\settings.json
+
+   原: "fal_api_key": "xxxxx"
+   改为:  "fal_api_key": ""
+
+
+===问题3：TTS无法使用===
+
+如果使用的是网盘的环境包一般不会报错，如果是从旧版升级而来，则复制并用命令行运行以下命令：
+
+# 0. 进入 LTX Python 目录 (使用环境变量，自动适配任何用户的电脑)
+cd $env:LOCALAPPDATA\LTXDesktop\python
+
+# 1. 下载官方的 pip 安装脚本
+Invoke-WebRequest -Uri https://bootstrap.pypa.io/get-pip.py -OutFile get-pip.py
+
+# 2. 用 LTX 的 Python 运行这个脚本来修复/更新 pip
+.\python.exe get-pip.py
+
+# 3. 临时设置 MSVC 编译器的环境变量为 UTF-8 (以防又遇到刚才的 C++ 乱码)
+$env:CL="/utf-8"
+
+# 4. 指定用 LTX 的 Python 安装 editdistance
+.\python.exe -m pip install editdistance
+
+# 5. 【核心防御】指定用 LTX 的 Python 安装主包，并强制指定 GPU 镜像源防覆盖
+.\python.exe -m pip install voxcpm --extra-index-url https://download.pytorch.org/whl/cu118
