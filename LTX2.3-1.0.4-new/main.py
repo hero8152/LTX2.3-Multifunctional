@@ -115,7 +115,7 @@ def get_lan_ip():
         ip = s.getsockname()[0]
         s.close()
         return ip
-    except:
+    except (OSError, ValueError):
         return "127.0.0.1"
 
 LAN_IP = get_lan_ip()
